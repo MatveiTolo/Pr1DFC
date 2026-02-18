@@ -10,15 +10,53 @@ const TodoStats: React.FC = () => {
 
   return (
     <div style={{
-      padding: '16px',
-      backgroundColor: '#f0f0f0',
-      borderRadius: '4px',
-      marginTop: '16px'
+      marginTop: '20px',
+      padding: '20px',
+      background: 'linear-gradient(135deg, #fff3e0, #ffe0b2)',
+      borderRadius: '8px',
+      border: '1px solid #ff9800'
     }}>
-      <h3>Статистика:</h3>
-      <p>Всего задач: {total}</p>
-      <p>Выполнено: {completed}</p>
-      <p>Осталось: {uncompleted}</p>
+      <h3 style={{
+        margin: '0 0 15px 0',
+        color: '#ff5722',
+        textAlign: 'center'
+      }}>
+        Статистика
+      </h3>
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr 1fr',
+        gap: '10px',
+        textAlign: 'center'
+      }}>
+        <div style={{
+          padding: '10px',
+          backgroundColor: 'white',
+          borderRadius: '6px',
+          boxShadow: '0 2px 5px rgba(0,0,0,0.1)'
+        }}>
+          <div style={{ fontSize: '12px', color: '#666' }}>Всего</div>
+          <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#ff9800' }}>{total}</div>
+        </div>
+        <div style={{
+          padding: '10px',
+          backgroundColor: 'white',
+          borderRadius: '6px',
+          boxShadow: '0 2px 5px rgba(255, 255, 255, 0.1)'
+        }}>
+          <div style={{ fontSize: '12px', color: '#666' }}>Выполнено</div>
+          <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#4caf50' }}>{completed}</div>
+        </div>
+        <div style={{
+          padding: '10px',
+          backgroundColor: 'white',
+          borderRadius: '6px',
+          boxShadow: '0 2px 5px rgba(0,0,0,0.1)'
+        }}>
+          <div style={{ fontSize: '12px', color: '#666' }}>Осталось</div>
+          <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#f44336' }}>{uncompleted}</div>
+        </div>
+      </div>
     </div>
   );
 };
